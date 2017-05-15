@@ -1,0 +1,17 @@
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\CalcTest.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\CalcTest.pdb
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\obj\Debug\CalcTest.csprojResolveAssemblyReference.cache
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\obj\Debug\CalcTest.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\obj\Debug\CalcTest.pdb
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\ClassLibrary.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcTest\bin\Debug\ClassLibrary.pdb

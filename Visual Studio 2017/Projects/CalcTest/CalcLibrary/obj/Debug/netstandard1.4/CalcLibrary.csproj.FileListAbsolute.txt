@@ -1,0 +1,7 @@
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcLibrary\bin\Debug\netstandard1.4\CalcLibrary.deps.json
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcLibrary\bin\Debug\netstandard1.4\CalcLibrary.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcLibrary\bin\Debug\netstandard1.4\CalcLibrary.pdb
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcLibrary\obj\Debug\netstandard1.4\CalcLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcLibrary\obj\Debug\netstandard1.4\CalcLibrary.AssemblyInfo.cs
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcLibrary\obj\Debug\netstandard1.4\CalcLibrary.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\CalcLibrary\obj\Debug\netstandard1.4\CalcLibrary.pdb
