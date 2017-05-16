@@ -1,0 +1,11 @@
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\SuperCalc\bin\Debug\SuperCalc.exe.config
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\SuperCalc\bin\Debug\SuperCalc.exe
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\SuperCalc\bin\Debug\SuperCalc.pdb
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\SuperCalc\bin\Debug\ClassLibrary.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\SuperCalc\bin\Debug\ClassLibrary.pdb
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\SuperCalc\obj\Debug\SuperCalc.csprojResolveAssemblyReference.cache
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\SuperCalc\obj\Debug\SuperCalc.Form1.resources
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\SuperCalc\obj\Debug\SuperCalc.Properties.Resources.resources
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\SuperCalc\obj\Debug\SuperCalc.csproj.GenerateResource.Cache
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\SuperCalc\obj\Debug\SuperCalc.exe
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\SuperCalc\obj\Debug\SuperCalc.pdb
