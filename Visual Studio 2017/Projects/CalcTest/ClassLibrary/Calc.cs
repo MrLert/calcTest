@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 
@@ -10,14 +11,26 @@ namespace ClassLibrary
         public Calc()
         {
             operations = new List<IOperation>();
-            var assem = Assembly.GetAssembly(typeof(IOperation));
-            var types = assem.GetTypes();
+            //var assem = Assembly.GetAssembly(typeof(IOperation));
+            var types = new List<Type>();
+            //найти длл рядом с экзе
+            var dlls = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.dll");
+            foreach (var dll in dlls)
+            {
+                //загрузить её как сборку
+                var assem = Assembly.LoadFrom(dll);
+                //добавить типы
+                types.AddRange(assem.GetTypes());
+            }
             foreach (var type in types)
             {
                 var interfaces = type.GetInterfaces();
                 if (interfaces.Contains(typeof(IOperation)))
                 {
+                    if (type.IsInterface)
+                        continue;
                     var oper = Activator.CreateInstance(type) as IOperation;
+                    
                     if (oper != null)
                     {
                         operations.Add(oper);
@@ -28,41 +41,40 @@ namespace ClassLibrary
         /// <summary>
         /// Список доступных операций
         /// </summary>
-        private IList<IOperation> operations { get; set; }
-
+        public IList<IOperation> operations { get; set; }
         /// <summary>
         /// Выполнить операцию
         /// </summary>
         /// <param name="operation">Название операции</param>
         /// <param name="args">Аргументы операции</param>
         /// <returns></returns>
-        public object Execute(string operation,object[] args)
+        public object Execute(IOperation operation,object[] args)
         {
-            double result;
-            var oper = operations.FirstOrDefault(x => x.Name == operation);
-            if (oper == null)
+            double result, z, y;
+            double.TryParse(args[0].ToString(), out z);
+            double.TryParse(args[1].ToString(), out y);
+                
+            var operArgs = operation as IOperationArgs;
+            if (operArgs != null)
             {
-                return "Error";
+                result = operArgs.Calc(args.Select(x=>double.Parse(x.ToString())));
             }
+            else
             {
-                double x;
-                double.TryParse(args[0].ToString(), out x);
-                double y;
-                double.TryParse(args[1].ToString(), out y);
-                result = oper.Calc(x, y);
+                result = operation.Calc(z, y);
             }
             return result;
         }
 
-        [Obsolete ("Не используйте")]
-        public double Sum(double x,double y)
-        {
-            return (double) Execute("sum", new object[]  {x, y});
-        }
-        [Obsolete("Не используйте")]
-        public double Divide(double x, double y)
-        {
-            return (double) Execute("divide", new object[] {x, y});
-        }
+        //[Obsolete ("Не используйте")]
+        //public double Sum(double x,double y)
+        //{
+        //    return (double) Execute("sum", new object[]  {x, y});
+        //}
+        //[Obsolete("Не используйте")]
+        //public double Divide(double x, double y)
+        //{
+        //    return (double) Execute("divide", new object[] {x, y});
+        //}
     }
 }

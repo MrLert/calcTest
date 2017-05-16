@@ -43,6 +43,7 @@
     <Compile Include="Calc.cs" />
     <Compile Include="DefaultOperations\Difference.cs" />
     <Compile Include="DefaultOperations\Divide.cs" />
+    <Compile Include="DefaultOperations\DivideOne.cs" />
     <Compile Include="DefaultOperations\Exponentiation.cs" />
     <Compile Include="DefaultOperations\Multiplication.cs" />
     <Compile Include="DefaultOperations\SumOperations.cs" />

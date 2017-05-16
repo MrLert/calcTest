@@ -14,5 +14,3 @@ C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\Console\b
 C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\Console\obj\Debug\Console.csprojResolveAssemblyReference.cache
 C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\Console\obj\Debug\Console.exe
 C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\Console\obj\Debug\Console.pdb
-C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\Console\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
-C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\Console\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
