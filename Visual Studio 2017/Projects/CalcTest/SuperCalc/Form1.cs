@@ -21,7 +21,6 @@ namespace SuperCalc
             Calc = new Calc();
             comboBoxOper.Items.AddRange(Calc.operations.Select(x=>x.Name).ToArray());
             comboBoxOper.DataSource = Calc.operations;
-            comboBoxOper.DisplayMember = "namespace";
         }
 
         private void BTCALC_Click(object sender, EventArgs e)
