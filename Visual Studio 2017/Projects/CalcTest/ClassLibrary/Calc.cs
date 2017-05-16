@@ -8,9 +8,12 @@ namespace ClassLibrary
 {
     public class Calc
     {
+        public List<string> TypeOperation;
         public Calc()
         {
+            TypeOperation = new List<string>();
             operations = new List<IOperation>();
+            DictionaryOperations = new Dictionary<string, IOperation>();
             //var assem = Assembly.GetAssembly(typeof(IOperation));
             var types = new List<Type>();
             //найти длл рядом с экзе
@@ -33,11 +36,16 @@ namespace ClassLibrary
                     
                     if (oper != null)
                     {
+                        var nameProject = type.FullName.Split('.').First()+ "." + type.FullName.Split('.').Last();
+                        TypeOperation.Add(nameProject);
                         operations.Add(oper);
+                        DictionaryOperations.Add(nameProject,oper);
                     }
                 }
             }
         }
+
+        public Dictionary<string, IOperation> DictionaryOperations;
         /// <summary>
         /// Список доступных операций
         /// </summary>
