@@ -15,13 +15,24 @@ namespace SuperCalc
 {
     public partial class Form1 : Form
     {
+        private class OperationB
+        {
+            public OperationB(IOperation operation)
+            {
+                Operation = operation;
+
+                var type = operation.GetType();
+                var Name = $"{type.Name}.{operation.Name}";
+            }
+            public IOperation Operation { get; set; }
+            public string Name { get; set; }
+        }
         private Calc Calc { get; }
         public Form1()
         {
             InitializeComponent();
             Calc = new Calc();
-            //comboBoxOper.DataSource = Calc.operations;
-
+            //comboBoxOper.DataSource = Calc.operations.Select(o => new OperationB(o)).ToList();
             comboBoxOper.DataSource = Calc.DictionaryOperations.ToList();
             comboBoxOper.ValueMember = "Value";
             comboBoxOper.DisplayMember = "Key";
@@ -30,6 +41,8 @@ namespace SuperCalc
         private void BTCALC_Click(object sender, EventArgs e)
         {
             object res = null;
+            var operB = comboBoxOper.SelectedItem as OperationB;
+            //var moreArgs = operB.Operation is IOperationArgs;
             var moreArgs = comboBoxOper.SelectedValue is IOperationArgs;
             var args = new List<object>();
             if (moreArgs)

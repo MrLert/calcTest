@@ -2,7 +2,6 @@ C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\ClassLibr
 C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\ClassLibrary\bin\Debug\ClassLibrary.pdb
 C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\ClassLibrary\obj\Debug\ClassLibrary.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\ClassLibrary\obj\Debug\ClassLibrary.pdb
-C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\Visual Studio 2017\Projects\CalcTest\ClassLibrary\bin\Debug\ClassLibrary.dll
 C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\Visual Studio 2017\Projects\CalcTest\ClassLibrary\bin\Debug\ClassLibrary.pdb
 C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\Visual Studio 2017\Projects\CalcTest\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache

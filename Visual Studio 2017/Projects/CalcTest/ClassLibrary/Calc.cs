@@ -3,21 +3,31 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Xml;
 
 namespace ClassLibrary
 {
     public class Calc
     {
+        private string ExtendDLLDirectory { get; set; }
         public List<string> TypeOperation;
-        public Calc()
+
+        public Calc() : this("")
+        {
+            
+        }
+        public Calc(string ExtendDLLDirectory)
         {
             TypeOperation = new List<string>();
             operations = new List<IOperation>();
             DictionaryOperations = new Dictionary<string, IOperation>();
             //var assem = Assembly.GetAssembly(typeof(IOperation));
             var types = new List<Type>();
+            var path = string.IsNullOrWhiteSpace(ExtendDLLDirectory)
+                ? Directory.GetCurrentDirectory()
+                : ExtendDLLDirectory;
             //найти длл рядом с экзе
-            var dlls = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.dll");
+            var dlls = Directory.GetFiles(path, "*.dll");
             foreach (var dll in dlls)
             {
                 //загрузить её как сборку
@@ -25,14 +35,15 @@ namespace ClassLibrary
                 //добавить типы
                 types.AddRange(assem.GetTypes());
             }
+            var ioper = typeof(IOperation);
             foreach (var type in types)
             {
                 var interfaces = type.GetInterfaces();
-                if (interfaces.Contains(typeof(IOperation)))
+                if (interfaces.Any(x=>x.FullName == ioper.FullName))
                 {
                     if (type.IsInterface)
                         continue;
-                    var oper = Activator.CreateInstance(type) as IOperation;
+                    var oper = (IOperation) Activator.CreateInstance(type);
                     
                     if (oper != null)
                     {
@@ -56,6 +67,7 @@ namespace ClassLibrary
         /// <param name="operation">Название операции</param>
         /// <param name="args">Аргументы операции</param>
         /// <returns></returns>
+        /// 
         public object Execute(IOperation operation,object[] args)
         {
             double result, z, y;
@@ -72,6 +84,13 @@ namespace ClassLibrary
                 result = operation.Calc(z, y);
             }
             return result;
+        }
+
+
+        public object Execute(string operation, object[] args)
+        {
+            var oper = operations.FirstOrDefault(x => x.Name == operation);
+            return Execute(oper, args);
         }
 
         //[Obsolete ("Не используйте")]
