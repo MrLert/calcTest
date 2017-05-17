@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,14 +20,17 @@ namespace SuperCalc
         {
             InitializeComponent();
             Calc = new Calc();
-            comboBoxOper.Items.AddRange(Calc.operations.Select(x=>x.Name).ToArray());
-            comboBoxOper.DataSource = Calc.operations;
+            //comboBoxOper.DataSource = Calc.operations;
+
+            comboBoxOper.DataSource = Calc.DictionaryOperations.ToList();
+            comboBoxOper.ValueMember = "Value";
+            comboBoxOper.DisplayMember = "Key";
         }
 
         private void BTCALC_Click(object sender, EventArgs e)
         {
             object res = null;
-            var moreArgs = comboBoxOper.SelectedItem is IOperationArgs;
+            var moreArgs = comboBoxOper.SelectedValue is IOperationArgs;
             var args = new List<object>();
             if (moreArgs)
             {
@@ -41,7 +45,7 @@ namespace SuperCalc
             }
             try
             {
-                res = Calc.Execute(comboBoxOper.SelectedItem as IOperation, args.ToArray());
+                res = Calc.Execute(comboBoxOper.SelectedValue as IOperation, args.ToArray());
             }
             catch (Exception exception)
             {
@@ -53,7 +57,7 @@ namespace SuperCalc
 
         private void comboBoxOper_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var moreArgs = comboBoxOper.SelectedItem is IOperationArgs;
+            var moreArgs = comboBoxOper.SelectedValue is IOperationArgs;
             panMoreArgs.Visible = moreArgs;
             panTwoAgrs.Visible = !moreArgs;
         }
