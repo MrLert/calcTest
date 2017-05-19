@@ -10,7 +10,18 @@ namespace ClassLibrary
     public class Calc
     {
         private string ExtendDLLDirectory { get; set; }
-        public List<string> TypeOperation;
+        public class OperationB
+        {
+            public OperationB(IOperation operation)
+            {
+                Operation = operation;
+
+                var type = operation.GetType();
+                Name = $"{type.Name}.{operation.Name}";
+            }
+            public IOperation Operation { get; set; }
+            public string Name { get; set; }
+        }
 
         public Calc() : this("")
         {
@@ -18,7 +29,7 @@ namespace ClassLibrary
         }
         public Calc(string ExtendDLLDirectory)
         {
-            TypeOperation = new List<string>();
+            
             operations = new List<IOperation>();
             DictionaryOperations = new Dictionary<string, IOperation>();
             //var assem = Assembly.GetAssembly(typeof(IOperation));
@@ -48,7 +59,7 @@ namespace ClassLibrary
                     if (oper != null)
                     {
                         var nameProject = type.FullName.Split('.').First()+ "." + type.FullName.Split('.').Last();
-                        TypeOperation.Add(nameProject);
+                       
                         operations.Add(oper);
                         DictionaryOperations.Add(nameProject,oper);
                     }
