@@ -1,0 +1,19 @@
+﻿@model WebCalcNew.Models.TableVIewModel
+@{
+    ViewBag.Title = "About";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <table>
+    @foreach(var v in Model.ViewList)
+    {
+        <tr>
+            
+                @Html.DisplayFor(model => v)
+            
+       </tr>
+    }
+    </table>
+}

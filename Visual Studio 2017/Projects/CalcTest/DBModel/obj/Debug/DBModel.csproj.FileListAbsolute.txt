@@ -1,0 +1,12 @@
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\DBModel\bin\Debug\DBModel.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\DBModel\bin\Debug\DBModel.pdb
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\DBModel\obj\Debug\DBModel.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\DBModel\obj\Debug\DBModel.pdb
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\DBModel\bin\Debug\DBModel.dll.config
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\DBModel\bin\Debug\EntityFramework.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\DBModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\DBModel\bin\Debug\EntityFramework.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\DBModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\DBModel\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\DBModel\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Дмитрий\Documents\Visual Studio 2017\Projects\CalcTest\DBModel\obj\Debug\DBModel.csprojResolveAssemblyReference.cache
