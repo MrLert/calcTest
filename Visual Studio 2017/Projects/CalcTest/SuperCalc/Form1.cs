@@ -15,22 +15,25 @@ namespace SuperCalc
 {
     public partial class Form1 : Form
     {
+        
         private Calc Calc { get; }
         public Form1()
         {
             InitializeComponent();
             Calc = new Calc();
-            //comboBoxOper.DataSource = Calc.operations;
-
-            comboBoxOper.DataSource = Calc.DictionaryOperations.ToList();
-            comboBoxOper.ValueMember = "Value";
-            comboBoxOper.DisplayMember = "Key";
+            comboBoxOper.DataSource = Calc.operations.Select(o => new Calc.OperationB(o)).ToList();
+            //comboBoxOper.DataSource = Calc.DictionaryOperations.ToList();
+            //comboBoxOper.ValueMember = "Value";
+            //comboBoxOper.DisplayMember = "Key";
+            comboBoxOper.DisplayMember = "Name";
         }
 
         private void BTCALC_Click(object sender, EventArgs e)
         {
             object res = null;
-            var moreArgs = comboBoxOper.SelectedValue is IOperationArgs;
+            var operB = comboBoxOper.SelectedItem as Calc.OperationB;
+            var moreArgs = operB.Operation is IOperationArgs;
+            //var moreArgs = comboBoxOper.SelectedValue is IOperationArgs;
             var args = new List<object>();
             if (moreArgs)
             {
@@ -45,7 +48,7 @@ namespace SuperCalc
             }
             try
             {
-                res = Calc.Execute(comboBoxOper.SelectedValue as IOperation, args.ToArray());
+                res = Calc.Execute(operB.Operation, args.ToArray());
             }
             catch (Exception exception)
             {
@@ -57,7 +60,9 @@ namespace SuperCalc
 
         private void comboBoxOper_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var moreArgs = comboBoxOper.SelectedValue is IOperationArgs;
+            var operB = comboBoxOper.SelectedItem as Calc.OperationB;
+            var moreArgs = operB.Operation is IOperationArgs;
+            //var moreArgs = comboBoxOper.SelectedValue is IOperationArgs;
             panMoreArgs.Visible = moreArgs;
             panTwoAgrs.Visible = !moreArgs;
         }
